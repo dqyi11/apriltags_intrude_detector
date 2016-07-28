@@ -82,6 +82,8 @@ target_link_libraries(apriltags_intrude_detector ${catkin_LIBRARIES}
                                                  ${APRILTAGS_LIBRARY}
                      )
 
+add_dependencies(apriltags_intrude_detector apriltags_intrude_detector_generate_messages_cpp)
+
 add_executable(intrude_client src/intrude_client.cpp
                               src/intrude_client_demo.cpp
               )
